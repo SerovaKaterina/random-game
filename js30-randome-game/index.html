@@ -1,11 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Онлайн-тренажер</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/skeleton.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Montserrat:wght@300&family=Poiret+One&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <h1 class="h1">ТАБЛИЦА НА "ОТЛИЧНО"</h1>
+    <div id="container">
+      <div id="left">
+        <h2 class="h2">Онлайн-тренажер</h2>
+        <div class="container_timer">
+          <div id="timer">
+            01:00
+            <button class="btn_timer" onclick="startTimer()">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Старт
+            </button>
+          </div>
+        </div>
+        <div class="container_praxis">
+          <div id="praxis">
+            <span id="question"></span>
+            <input
+              type="number"
+              id="answer"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
+            <span id="resultIcon"></span>
+          </div>
+          <button class="btn_praxis" onclick="checkAnswer()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            ответить
+          </button>
+        </div>
+        <div class="container_score">
+          <div class="result">
+            <div class="result_right">
+              Верно
+              <span id="result_right">0</span>
+            </div>
+            <div class="result_wrong">
+              Неверно
+              <span id="result_wrong">0</span>
+            </div>
+          </div>
+          <p id="text_result"></p>
+        </div>
+      </div>
+      <div id="right">
+        <img id="image" src="./assets/img/book.png" alt="Image" />
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="footer_links">
+                <a href="https://github.com/SerovaKaterina" target="_blank">
+                    <img src="./assets/img/github.png" alt="GitHub">
+                </a>
+            </div>
+            <div class="footer_info">
+                &copy; 2024
+            </div>
+            <div class="footer_course">
+                <a href="https://rs.school/courses/javascript-ru" target="_blank">
+                    <img src="./assets/img/rs-school-logo.svg" alt="Rsschool">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
 </html>
