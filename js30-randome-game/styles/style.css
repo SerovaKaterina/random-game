@@ -405,6 +405,24 @@ footer {
   #resultIcon {
     margin-top: 20px;
   }
+  .footer_container {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .footer_links img {
+    margin: 0 auto;
+    align-items: center;
+  }
+  .footer_info {
+    flex: 1;
+    text-align: center;
+    font-weight: bolder;
+    padding-right: 0;
+  }
+  .footer_course img {
+    width: 30%;
+    align-items: center;
+  }
 }
 @media (max-width: 700px) {
   #timer {
